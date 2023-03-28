@@ -25,9 +25,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Branch name
-        run: echo "running on branch $github.ref_name"
+        run: echo "running on branch $GITHUB.REF_NAME"
       - name: Branch name
-        run: echo "running on branch ${github.ref_name}"
+        run: echo "running on branch ${{github.ref_name}}"
       - name: Branch name
         run: echo "running on branch github.ref_name"
       - uses: actions/checkout@v2
